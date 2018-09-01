@@ -4,11 +4,12 @@ const linkStyle = {
   marginRight: 15
 };
 
-const Header = () => (
+const Header = props => (
   <div>
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>
+    {props.activeChat ? <a id="resetBtn">Reset</a> : <a id="startBtn">Start</a>}
   </div>
 );
 
