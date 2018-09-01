@@ -1,13 +1,14 @@
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
-import App from "../pages/index.js";
+import Index from "../pages/index.js";
+import Header from "../components/Header";
 
-describe("With Enzyme", () => {
-  it('App shows "Hello world!"', () => {
-    const app = shallow(<App />);
+describe("Index Page", () => {
+  it("should show start button", () => {
+    const index = mount(<Index />);
 
-    expect(app.find("p").text()).toEqual("Hello World!");
+    expect(index.find("a#startBtn").length).toBe(1);
   });
 });
