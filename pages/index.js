@@ -1,5 +1,7 @@
+import MainLayout from "../components/MainLayout";
+
 export default () => (
-  <div>
+  <MainLayout>
     <p>Hello World!</p>
-  </div>
+  </MainLayout>
 );
