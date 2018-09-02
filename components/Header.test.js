@@ -19,6 +19,26 @@ describe("Header Component", () => {
     expect(header.find("#startBtn").length).toBe(0);
   });
 
+  it("should call onReset on reset clicked", () => {
+    const handler = jest.fn();
+    const header = shallow(<Header activeChat={true} onReset={handler} />);
+    header
+      .find("#resetBtn")
+      .first()
+      .simulate("click");
+    expect(handler).toBeCalled();
+  });
+
+  it("should call onStart on start clicked", () => {
+    const handler = jest.fn();
+    const header = shallow(<Header activeChat={false} onStart={handler} />);
+    header
+      .find("#startBtn")
+      .first()
+      .simulate("click");
+    expect(handler).toBeCalled();
+  });
+
   it("should show start button if !activeChat", () => {
     const header = shallow(<Header activeChat={false} />);
 
