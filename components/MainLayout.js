@@ -8,7 +8,11 @@ const layoutStyle = {
 
 const Layout = props => (
   <div style={layoutStyle}>
-    <Header activeChat={props.activeChat} />
+    <Header
+      activeChat={props.activeChat}
+      onReset={props.onReset}
+      onStart={props.onStart}
+    />
     {props.children}
   </div>
 );
