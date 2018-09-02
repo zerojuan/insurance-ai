@@ -1,7 +1,7 @@
 import { shallow } from "enzyme";
 
-import MainLayout from "./MainLayout";
-import Header from "./Header";
+import MainLayout from "../MainLayout";
+import Header from "../Header";
 
 describe("MainLayout", () => {
   it("should have a Header", () => {

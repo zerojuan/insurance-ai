@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import QnA from "./QnA";
+import QnA from "../QnA";
 
 describe("QnA", () => {
   let qnaFixture;

@@ -1,7 +1,7 @@
 import { shallow } from "enzyme";
 import React from "react";
 
-import Header from "./Header.js";
+import Header from "../Header.js";
 import Link from "next/link";
 
 describe("Header Component", () => {
