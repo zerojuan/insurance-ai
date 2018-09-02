@@ -12,7 +12,7 @@ const qnAObject = {
 };
 
 export default () => (
-  <MainLayout>
+  <MainLayout activeChat={true}>
     <QnA
       question={qnAObject.question.content}
       answers={qnAObject.answers}
