@@ -1,9 +1,11 @@
 import { mount } from "enzyme";
 import React from "react";
-
 import mockAxios from "jest-mock-axios";
 
 import Index from "../pages/index.js";
+
+// MOCK ENVIRONMENT VARIABLE
+jest.mock("../lib/env");
 
 describe("Index Page", () => {
   afterEach(() => {
