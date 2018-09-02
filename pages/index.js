@@ -1,8 +1,11 @@
+import api from "../lib/api";
 import MainLayout from "../components/MainLayout";
 
 class Index extends React.Component {
-  onStart = () => {
-    console.log("Start Button Clicked");
+  onStart = async e => {
+    e.preventDefault();
+
+    const initialResult = await api.post("/chat/start");
   };
   render() {
     return (
