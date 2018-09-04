@@ -4,9 +4,9 @@
   "description": "Insurance AI website",
   "main": "index.js",
   "scripts": {
-    "test-watch": "NODE_ENV=test jest --watch",
+    "test-watch": "NODE_ENV=test API_URL=localhost jest --watch --verbose",
     "test": "NODE_ENV=test jest",
-    "dev": "node server.js",
+    "dev": "node server.js | pino-pretty",
     "build": "next build",
     "start": "next start"
   },
@@ -20,10 +20,23 @@
   },
   "private": true,
   "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "antd": "^3.9.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "express-pino-logger": "^4.0.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.12",
+    "mustache": "^2.3.2",
     "next": "^6.1.1",
+    "pino": "^5.4.1",
+    "pino-pretty": "^2.1.0",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "react-form": "^3.5.6",
+    "shortid": "^2.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -34,6 +47,7 @@
     "eslint": "^5.4.0",
     "eslint-plugin-prettier": "^2.6.2",
     "jest": "^23.5.0",
+    "jest-mock-axios": "^2.1.11",
     "prettier": "^1.14.2",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.4.2"

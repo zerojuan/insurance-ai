@@ -1,19 +1,12 @@
-import api from "../lib/api";
 import MainLayout from "../components/MainLayout";
 
-class Index extends React.Component {
-  onStart = async e => {
-    e.preventDefault();
+import { onStart } from "../actions/start";
 
-    const initialResult = await api.post("/chat/start");
-  };
-  render() {
-    return (
-      <MainLayout activeChat={false} onStart={this.onStart}>
-        <p>Hello World!</p>
-      </MainLayout>
-    );
-  }
-}
+const Index = () => (
+  <MainLayout activeChat={false} onStart={onStart}>
+    <h1>Insurance AI</h1>
+    <h3>Insurance made smart</h3>
+  </MainLayout>
+);
 
 export default Index;

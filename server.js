@@ -1,3 +1,4 @@
+require("dotenv").config();
 const next = require("next");
 
 const expressServer = require("./api/server");
@@ -13,17 +14,17 @@ app
     expressServer.get("/start/:sessionId/:step", (req, res) => {
       const actualPage = "/start";
       const queryParams = {
-        step: req.params.stop,
+        step: req.params.step,
         sessionId: req.params.sessionID
       };
 
       app.render(req, res, actualPage, queryParams);
     });
 
-    expressServer.get("/quote/:session", (req, res) => {
+    expressServer.get("/quote/:sessionId", (req, res) => {
       const actualPage = "/quote";
       const queryParams = {
-        authKey: req.params.authKey
+        sessionId: req.params.sessionId
       };
 
       app.render(req, res, actualPage, queryParams);

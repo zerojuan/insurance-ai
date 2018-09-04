@@ -1,20 +1,17 @@
 import Header from "./Header";
+import { Layout } from "antd";
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: "1px solid #DDD"
-};
+const { Content } = Layout;
 
-const Layout = props => (
-  <div style={layoutStyle}>
+const MainLayout = props => (
+  <Layout>
     <Header
       activeChat={props.activeChat}
       onReset={props.onReset}
       onStart={props.onStart}
     />
-    {props.children}
-  </div>
+    <Content style={{ padding: "0 50px" }}>{props.children}</Content>
+  </Layout>
 );
 
-export default Layout;
+export default MainLayout;

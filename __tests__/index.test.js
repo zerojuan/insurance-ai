@@ -3,7 +3,7 @@ import React from "react";
 import mockAxios from "jest-mock-axios";
 
 import Index from "../pages/index.js";
-
+console.log("Test");
 // MOCK ENVIRONMENT VARIABLE
 jest.mock("../lib/env");
 
@@ -28,6 +28,6 @@ describe("Index Page", () => {
     // called the mock api
     expect(mockAxios.post).toHaveBeenCalledWith("/chat/start");
 
-    // then moved to next route
+    // TODO: test moving to next route
   });
 });
